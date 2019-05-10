@@ -39,11 +39,11 @@
 			infowindow = new google.maps.InfoWindow();
 		}
 
+		//clear the table everytime when user clicks the button
 		function clear(){
 			city = "";
 			$("#myTable tr").remove();
 		}
-
 
 		function searchHospitals() {
 			map = new google.maps.Map(document.getElementById("map"), {
