@@ -51,6 +51,7 @@
         zoom: 12
         });
 
+	//get the location(latitude,longitude) of the city user entered, and return a list of hospitals witnin 10 miles
         geocoder.geocode({ 'address': city}, function(results, status) {
           if (status == 'OK') {
             map.setCenter(results[0].geometry.location);
@@ -85,6 +86,7 @@
         }
       }
 
+      //mark the hospital on GoogleMap
       function createMarker(place) {
         var marker = new google.maps.Marker({
           map: map,
